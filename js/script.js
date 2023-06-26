@@ -17,6 +17,11 @@ document.addEventListener('click', function(e) {
       list.classList.toggle('menu-list-item-active')
     }
 
+    if (e.target.closest('.necessary-document-top')) {
+      let documentBlock = e.target.closest('.necessary-document-block');
+      documentBlock.classList.toggle('necessary-document-block-active')
+    }
+
 })
 
 window.onscroll = function(){
