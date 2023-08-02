@@ -3480,6 +3480,10 @@ body {
   max-width: 1380px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
+}
+.comment-container .customer-reviews-btns .button-prev {
+  left: -65px;
 }
 
 .comment-sliders {
@@ -3583,6 +3587,17 @@ body {
   border-radius: 10px;
 }
 
+@media (max-width: 1500px) {
+  .comment-container .button-prev {
+    left: 20% !important;
+  }
+  .comment-container .button-next {
+    right: 20%;
+  }
+  .comment-container .button-next, .comment-container .button-prev {
+    top: 107.5%;
+  }
+}
 @media (min-width: 992px) {
   .comment-item-text::-webkit-scrollbar {
     width: 3px;
@@ -3599,6 +3614,12 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .comment-container .button-next, .comment-container .button-prev {
+    top: auto;
+    left: auto !important;
+    right: auto;
+    position: relative;
+  }
   .comment-sliders .swiper-slide {
     max-width: 100%;
   }
@@ -4722,6 +4743,7 @@ body {
   width: 100%;
   margin-bottom: 20px;
   height: 250px;
+  position: relative;
 }
 .customer-reviews-slider .swiper-slide {
   max-width: 350px;
@@ -4791,6 +4813,34 @@ body {
   color: inherit;
 }
 
+.button-next,
+.button-prev {
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.button-prev {
+  left: -95px;
+}
+
+.button-next {
+  right: -55px;
+}
+
+@media (max-width: 1200px) {
+  .button-prev {
+    left: 20%;
+  }
+  .button-next {
+    right: 20%;
+  }
+  .button-next,
+  .button-prev {
+    top: 107.5%;
+  }
+}
 @media (max-width: 992px) {
   .customer-reviews-slider .swiper-slide {
     max-width: 50%;
@@ -4819,8 +4869,30 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .button-next,
+  .button-prev {
+    top: auto;
+    left: auto;
+    right: auto;
+    position: relative;
+  }
+  .customer-reviews-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    margin-top: 20px;
+  }
+  .customer-reviews-btns .pagination {
+    margin-top: 0;
+  }
   .customer-reviews-slider {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
   .customer-reviews-slider .swiper-slide {
     max-width: 100%;
